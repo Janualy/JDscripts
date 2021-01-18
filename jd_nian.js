@@ -557,8 +557,8 @@ function shopLotteryInfo(shopSign) {
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
           if (safeGet(data)) {
+          console.log(`去做${data}任务`)
             data = JSON.parse(data);
-            console.log(`去做${data}任务`)
             if(data.code===0) {
               for(let vo of data.data.result.taskVos){
                 if(vo.status===1){
