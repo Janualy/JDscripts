@@ -558,6 +558,7 @@ function shopLotteryInfo(shopSign) {
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
+            console.log(`去做${data}任务`)
             if(data.code===0) {
               for(let vo of data.data.result.taskVos){
                 if(vo.status===1){
