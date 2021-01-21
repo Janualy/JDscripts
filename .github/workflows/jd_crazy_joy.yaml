@@ -3,7 +3,7 @@ name: 京东疯狂JOY
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 18 * * *"
+        - cron: "0 20 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行【京东疯狂JOY】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_crazy_joy.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
