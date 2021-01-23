@@ -27,7 +27,7 @@ jobs:
                   npm install
             - name: "运行 【京东金融养猪猪】"
               run: |
-                  node onlyOneExecute.js
+                  node jd_petPig.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
@@ -46,4 +46,4 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_pigPet.js
+                  SYNCURL: https://github.com/lxk9301/jd_scripts/raw/master/jd_pigPet.js
